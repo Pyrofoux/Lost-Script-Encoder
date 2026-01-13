@@ -1,0 +1,1 @@
+A simple web tool text to Lost Script, a cypher designed by Wildbow.
