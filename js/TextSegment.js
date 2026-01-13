@@ -116,7 +116,7 @@ class TextSegment extends Segment
                             let detected_set = getUnlockedSet(letter);
                             // if(detected_set != null)
                             // {
-                                sets.push(getUnlockedSet(letter));
+                                sets.push(detected_set);
                             // }
                             
                         }
@@ -133,7 +133,16 @@ class TextSegment extends Segment
 
                 if(!isShort)
                 {
-                    output.push(chars[`square${knowns}`]);
+                    if(knowns != 4)
+                    {
+                        output.push(chars[`square${knowns}`]);
+                    }
+                    else
+                    {
+                        output = this.chars;
+                        if(this.continued == false) output = [...output, chars.space];
+                    }
+                    
                 }
 
                 let seg = new CypherSegment(output);
@@ -143,7 +152,15 @@ class TextSegment extends Segment
                 {
                     if(!this.continued)
                     {
-                        seg.append(chars.dash);
+                        if(knowns == seg.chars.length)
+                        {
+                            seg.append(chars.space);
+                        }
+                        else
+                        {
+                            seg.append(chars.dash);
+                        }
+                        
                     }
                 }
                 else
