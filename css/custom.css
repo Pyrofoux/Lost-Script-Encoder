@@ -1,0 +1,26 @@
+#input
+{
+    width:75%;
+    height: calc(var(--unit)*6);
+}
+
+#output
+{
+    font-size: calc(var(--unit)*4);
+}
+
+.underlined
+{
+    text-decoration: underline;
+}
+
+.annotated_set
+{
+    font-size: calc(var(--unit)*2);
+    margin: calc(var(--unit)*0.5);
+}
+
+#unlocked_letters, #letter_sets
+{
+    width:calc(var(--unit)*30)
+}

@@ -1,0 +1,57 @@
+:root {
+  --dark-black: #121212;
+  --beige: #c4c1af;
+  --white-alternate: #f8f8f8;
+  --accent-color: #eb3b5a;
+  --accent-color-2: rgb(250, 130, 49);
+  --modal-minimum: max(calc(var(--unit)*1.9), 20px);
+
+  --unit: calc(min(0.6rem,1.5vw));
+}
+
+@font-face {
+  font-family: ClearSans;
+  src: url(../fonts/ClearSans-Medium.ttf);
+}
+
+@font-face {
+  font-family: CanvasFont; /*to change the puzzle's font*/
+  src: url(../fonts/ClearSans-Medium.ttf);
+}
+
+.hoverable, .submit_btn
+{
+  transition: filter .2s, transform .2s ease-out;
+}
+
+
+.hoverable:hover
+{
+  filter: opacity(0.7) !important;
+  cursor:pointer;
+}
+
+.hidden
+{
+  display:none !important;
+}
+
+.invisible
+{
+  visibility: hidden;
+}
+
+.noSelect
+{
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.noSelect:focus {
+    outline: none !important;
+}

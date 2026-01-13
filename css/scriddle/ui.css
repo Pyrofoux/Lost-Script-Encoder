@@ -1,0 +1,293 @@
+body
+{
+  font-family: ClearSans;
+  text-align:center;
+  touch-action: manipulation;
+  
+}
+
+#content
+{
+  text-align:center;
+}
+
+
+#puzzlecanvas
+{
+  margin:auto;
+  width:100%;
+  height:100%;
+  /* background-color:rgba(90%, 90%,100%,0.5); */
+  cursor:pointer;
+}
+
+
+#puzzletitle
+{
+  text-align:center;
+}
+
+#button_bar
+{
+  margin:auto;
+  width:auto;
+  text-align:center;
+  /* background-color:goldenrod */
+}
+
+input[type="button"], button
+{
+  font-family: ClearSans, Verdana, Geneva, Tahoma, sans-serif;
+
+  border:none;
+  /* font-size: 3vh; */
+  font-size: calc(var(--unit)*3);
+  cursor:pointer;
+
+  font-weight: 700;
+  /* padding-left: 0.8vh;
+  padding-right: 0.8vh;
+  padding-top: 0.1vh;
+  padding-bottom: 0.1vh; */
+  /* margin: 0 0.8vh; */
+  border-radius: 100px;
+}
+
+#submit_btn
+{
+  transition: color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
+  width:calc(var(--unit)*14);
+}
+
+.submit_btn
+{
+  background-color:var(--dark-black);
+  color:var(--white-alternate);
+  border-radius:100px !important;
+  padding-left: calc(var(--unit)*1);
+  padding-right: calc(var(--unit)*1);
+  padding-top:calc(var(--unit)*0.5);
+  padding-bottom:calc(var(--unit)*0.5);
+}
+
+.attempt_label
+{
+  background-color:transparent !important;
+  color:black;
+  pointer-events: none;
+  padding-left: calc(var(--unit)*1);
+  padding-right: calc(var(--unit)*1);
+  padding-top:calc(var(--unit)*0.5);
+  padding-bottom:calc(var(--unit)*0.5);
+}
+
+
+
+#rules_header
+{
+  display:inline-block;
+  height: calc(var(--unit)*5);
+}
+
+.rules_bar
+{
+  font-size: calc(var(--unit)*3);
+  font-weight: 400;
+  display:inline-block;
+  margin-left:calc(var(--unit)*2);
+}
+
+.rule_icon {
+    color:#fff;
+    font-size:calc(var(--unit)*4);
+    vertical-align: bottom;
+    margin-right:calc(var(--unit)*0.75);
+}
+
+.rule_icon:hover
+{
+  transform: translateY(calc(var(--unit)*-0.5));
+}
+
+.rule_icon_locked
+{
+  border-bottom: solid calc(var(--unit)*0.5);
+  transform: translateY(calc(var(--unit)*-0.5));
+}
+
+/* #title_header
+{
+  position:absolute;
+  transform: translateX(calc(var(--unit)*-0.5));
+} */
+
+#title_header > .rule_icon
+{
+  font-size:calc(var(--unit)*4);
+  width:calc(var(--unit)*4);
+  height:calc(var(--unit)*4);
+  line-height:calc(var(--unit)*3.6);
+  border-radius:100%;
+  color:#fff;
+  display:inline-block;
+  text-align:center;
+  margin:calc(var(--unit)*0.5);
+
+  transition: filter .2s, transform .2s ease-out;
+}
+
+#title_subtitle
+{
+  font-size:calc(var(--unit)*2);
+}
+
+.rule_icon_unknown
+{
+  color :var(--dark-black);
+  background-color:transparent;
+  cursor:default;
+}
+
+#rules_text
+{
+  font-size:calc(var(--unit)*2.8);
+}
+
+.attempt_label
+{
+  /* text-decoration: underline 4px black; */
+  text-underline-offset: 0.15em;
+}
+
+/*****************/
+
+.icon-header
+{
+  font-size:calc(var(--unit)*4);
+  float:right;
+  color:var(--dark-black);
+  margin-left: calc(var(--unit)*0.5);
+  cursor:pointer;
+}
+
+
+.icon-bar-left
+{
+    float:left !important;
+    margin-left: calc(var(--unit)*0.5);
+    margin-right: 0 !important;
+}
+
+#icon-sound
+{
+  width: calc(var(--unit)*4);
+}
+
+.icon-history
+{
+  font-size:calc(var(--unit)*3.5);
+  color:var(--dark-black);
+  cursor:pointer;
+  /* background-color:red; */
+  vertical-align: top;
+  transform: translateY(calc(var(--unit)*1));
+}
+
+
+.icon-day-text
+{
+  transform: translateY(5%);
+  font-size: calc(var(--unit)*2.8);;
+}
+
+.how-to-icon
+{
+  font-size:calc(var(--unit)*3);
+  transform: translateY(calc(var(--unit)*0.5));
+}
+
+#calendar-subtitle
+{
+  position:absolute !important;
+  left:calc(var(--unit)*4.5);
+  top:calc(var(--unit)*6.8);
+  /* background-color: rgba(0,0,0,25%); */
+  text-align: left;
+  font-size:calc(var(--unit)*1.5);
+  margin:0;
+}
+
+#solved-button
+{
+  border-radius: 0;
+  color: var(--accent-color);
+  border: solid calc(var(--unit)*0.5);
+  background: transparent;
+  position: absolute;
+  margin-left: max(calc(var(--unit)*5));
+  font-size:calc(var(--unit)*2);
+}
+
+#header-more-puzzles
+{
+    background-color:var(--dark-black);
+    color: #fff;
+    font-size:calc(var(--unit)*2);
+    transform:translateY(100%);
+    margin-left: calc(var(--unit)*0.5);
+    padding:  calc(var(--unit)*0.5);
+    padding-left:  calc(var(--unit)*1);
+    padding-right:  calc(var(--unit)*1);
+}
+
+#modal-contact-email
+{
+  font-size:var(--modal-minimum);
+  background-color:white;
+  border-radius:100px;
+  padding-left:calc(var(--modal-minimum)*0.5);
+  width: min(calc(var(--modal-minimum)*20), 60%);
+}
+
+.send_btn
+{
+  transform:scale(0.8) !important;
+  background-color:var(--dark-black) !important;
+}
+
+
+.clipboard
+{
+  transform:scale(0.8) !important;
+  background-color:var(--dark-black) !important;
+}
+
+[popover]
+{
+  opacity:0;
+  transition: opacity 1s ease-in;
+}
+
+/* Note: Will fail once if pressed two times in a row. Okay if clicking somewhere else in between, though.  */
+[popover]:popover-open {
+  display: grid;
+  opacity: 0.9;
+  background-color:#121212;
+  border:none;
+  color:white;
+  border-radius:100px;
+  animation: fade-popover 1s ease-in-out forwards;
+}
+@keyframes fade-popover {
+  0%,100%
+  {
+    opacity: 0;
+    display:none;
+  }
+
+  50%
+  {
+    opacity:.9;
+  }
+}

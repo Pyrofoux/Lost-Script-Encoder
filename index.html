@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="./css/scriddle/base.css">
+  <link rel="stylesheet" href="./css/scriddle/layout.css">
+  <link rel="stylesheet" href="./css/scriddle/ui.css">
+
+  <link rel="stylesheet" href="./css/custom.css">
+
+  <link  rel="stylesheet" href="./css/fontawesome/css/fontawesome.min.css"/>
+  <link rel="stylesheet"  href="./css/fontawesome/css/regular.min.css" />
+  <link rel="stylesheet"  href="./css/fontawesome/css/solid.min.css" />
+  <title>Lost Script Encoder</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body class="noSelect">
+
+  <div class="site">
+
+    <header class="masthead">
+        <h1 id="title_header">Lost Script Encoder</h1>
+    </header>
+
+    <main id="content" class="main-content">
+
+
+        <input id="unlocked_letters" type="text" placeholder="Unlocked characters"  onchange="encodeText()"/>
+        <input id="letter_sets"      type="text" placeholder="Letter sets"          onchange="encodeText()"/>
+        <br/>
+        
+        <input type="checkbox" id="option_color" onchange="encodeText()"/> Color sets
+        <input type="checkbox" id="option_order" onchange="encodeText()"/> Order sets
+        <br/>
+        <textarea id="input" onchange="encodeText()">Text to encode.</textarea>
+        <br/>
+        <br/>
+        <input id="submit_btn" class="submit_btn" type="button" value="Encode" onclick="encodeText()"/>
+        <br/>
+        <br/>
+        <div id="output"></div>
+
+    </main>
+
+    <footer class="colophon grid">
+        <aside id="author-credit" >The Lost Script Cypher was designed by <b id="author-credit-name">Wildbow</b>.</aside>
+        <aside>This utlity was developped by <b><a href="https://bsky.app/profile/pyrofoux.bsky.social">Younès Rabii</a></b>, aka <b>Pyro ★</b> for the 25-26 100 Years Lost event.</aside>
+    </footer>
+
+    </div>
+
+    <script type="text/javascript"></script>
+    <script src="js/Segment.js"></script>
+    <script src="js/CypherSegment.js"></script>
+    <script src="js/TextSegment.js"></script>
+    <script src="js/cypher.js"></script>
+
+    <script src="js/utils.js"></script>
+    <script src="js/ui.js"></script>
+
+
+</body>
+</html>
