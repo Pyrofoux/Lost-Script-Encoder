@@ -31,7 +31,7 @@ function parseSets(input)
 function encodeText()
 {
 
-    params.unlocked       =  parseUnlocked(get("unlocked_letters").value);
+    params.unlocked       = parseUnlocked(get("unlocked_letters").value);
     params.sets           = parseSets(get("letter_sets").value);
     params.color_sets     = get("option_color").checked;
     params.order_sets     = get("option_order").checked;
@@ -127,6 +127,8 @@ function init()
     get("unlocked_letters").addEventListener("input", encodeText);
     get("letter_sets").addEventListener("input", encodeText);
     get("input").addEventListener("input", encodeText);
+
+    encodeText();
 }
 
 
