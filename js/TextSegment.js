@@ -165,12 +165,12 @@ class TextSegment extends Segment
                 }
                 else
                 {
-                    if(this.continued)
+                    if(this.continued && knowns != 4)
                     {
                         seg.decorators["underline"] = true;
                     }
 
-                    if(sets.length > 0)
+                    if(sets.length > 0 && knowns != 4)
                     {
                         seg.decorators["sets"] = sets;
                         if(!params["order_sets"])
